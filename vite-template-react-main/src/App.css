@@ -1,42 +1,168 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app-container {
   display: flex;
-  flex-direction: column;
+  height: 100%;
+}
+
+.app-left {
+  width: 10%;
+  min-width: 190px;
+  background: #343434;
+}
+
+.app-left-header,
+.app-left-body-title {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  color: white;
+  font-weight: bold;
+  padding: 10px 0;
+}
+
+.add {
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  border-radius: 50%;
+  margin: 0 10px;
+  background: #6fcb66;
+  text-align: center;
+  line-height: 25px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.notebook-icon {
+  height: 25px;
+  text-align: center;
+  line-height: 25px;
+  margin: 0 5px 0 10px;
+}
+
+.notebook-list,
+.app-center-list {
+  margin: 0;
+  list-style: none;
+  padding: 0;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.notebook-list li {
+  margin-top: 10px;
+  font-size: 14px;
+  display: flex;
+  padding: 5px 0 5px 25px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.notebook-list .active {
+  background: #1a1a1a;
 }
 
-button {
-  font-size: calc(10px + 2vmin);
+.notebook-list li i {
+  margin-right: 3px;
+}
+
+.app-center {
+  width: 12%;
+  min-width: 180px;
+  background: #ececec;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-center-header {
+  padding: 10px 0px 10px 10px;
+  font-weight: bold;
+  border-bottom: 1px solid #ccc;
+}
+
+.app-center-list {
+  padding: 0;
+  height: 100%;
+  overflow: scroll;
+}
+
+.app-center-list .active {
+  background: yellow;
+}
+
+.app-center-list li {
+  margin: 5px 10px;
+  height: 180px;
+  background: white;
+  color: black;
+}
+
+.app-center-list-item .note-header {
+  font-weight: bold;
+  text-align: center;
+  height: 30px;
+  line-height: 30px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding-left: 5px;
+  font-size: 12px;
+}
+
+.app-center-list-item .note-content {
+  padding: 0px 10px;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  height: 130px;
+  line-clamp: 3;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6;
+}
+
+.app-right {
+  width: 78%;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-right-header {
+  height: 30px;
+  line-height: 30px;
+  padding-left: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.app-right-header .notebookName {
+  margin-left: 5px;
+  font-weight: bolder;
+  font-size: 13px;
+}
+
+.app-right-title {
+  height: 20px;
+  line-height: 20px;
+  padding: 8px 0 8px 30px;
+  font-weight: bold;
+  outline: none;
+}
+
+.app-right-content {
+  display: flex;
+  flex: 1;
+  overflow: scroll;
+}
+
+.app-right-edit {
+  background: #22272a;
+  width: 50%;
+  color: white;
+  font-size: 15px;
+  line-height: 25px;
+  padding: 10px 0 0 10px;
+  outline: none;
+  resize: none;
+}
+
+.app-right-show {
+  border-top: 1px solid #ccc;
+  width: 50%;
+  padding-left: 20px;
+  overflow: scroll;
 }
